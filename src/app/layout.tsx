@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer/Footer'
 import Navbar from '@/components/Navbar/Navbar'
 import type { Metadata } from 'next'
 import { DM_Serif_Display, Poppins } from 'next/font/google'
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} ${dmSerifDisplay.variable} antialiased scroll-smooth bg-background text-foreground font-body`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
