@@ -72,14 +72,14 @@ export function NavbarMenuMobile() {
 
   return (
     <div className='inline-block md:hidden' onKeyDown={handleKeyDown} ref={menuRef}>
-      <button className='md:hidden relative z-10 flex justify-center items-center -mr-2 w-8 h-8' type='button' ref={buttonRef} aria-expanded={isOpen} aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'} onClick={() => setIsOpen(!isOpen)}>
-        <svg className='overflow-visible h-3.5 w-3.5 stroke-accent pointer-events-none' fill='none' strokeWidth='2' strokeLinecap='round' aria-hidden='true'>
+      <button className='md:hidden relative z-30 flex justify-center items-center -mr-2 w-8 h-8 pointer-events-auto' type='button' ref={buttonRef} aria-expanded={isOpen} aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'} onClick={() => setIsOpen(!isOpen)}>
+        <svg className='h-3.5 w-3.5 stroke-accent pointer-events-none' fill='none' strokeWidth='2' strokeLinecap='round' aria-hidden='true'>
           <path className={`origin-center ${isOpen ? 'scale-90 opacity-0' : 'scale-100 opacity-100'} duration-150`} d='M0 1H14M0 7H14M0 13H14'></path>
           <path className={`origin-center ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0'} duration-150`} d='M2 2L12 12M12 2L2 12'></path>
         </svg>
       </button>
-      <div className={`${!isOpen ? 'invisible opacity-0' : 'visible opacity-100'} fixed inset-0 bg-background/50 duration-150`} aria-hidden='true' onClick={() => setIsOpen(false)}></div>
-      <ul className={`${!isOpen ? 'invisible opacity-0 scale-95' : 'visible opacity-100 scale-100'} absolute top-19 right-5 left-5 flex flex-col origin-top rounded-2xl border border-taupe-200 p-4 bg-white text-foreground text-lg tracking-tight duration-150`} aria-hidden={!isOpen}>
+      <div className={`${!isOpen ? 'invisible opacity-0 pointer-events-none' : 'visible opacity-100'} fixed inset-0 z-10 bg-background/50 duration-150`} aria-hidden='true' onClick={() => setIsOpen(false)} />
+      <ul className={`${!isOpen ? 'invisible opacity-0 scale-95' : 'visible opacity-100 scale-100'} absolute top-20 right-5 left-5 z-20 flex flex-col origin-top rounded-2xl border border-taupe-200 p-4 bg-white text-foreground text-lg tracking-tight duration-150`} aria-hidden={!isOpen}>
         {links.map(({ label, href }) => (
           <li key={href}>
             <Link className={`block p-2 hover:text-accent ${isCurrent(href) && 'text-accent'} font-medium`} href={href}>
