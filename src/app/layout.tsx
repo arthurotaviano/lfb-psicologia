@@ -3,13 +3,13 @@ import { DM_Serif_Display, Poppins } from 'next/font/google'
 import './globals.css'
 
 const poppins = Poppins({
-  variable: '--font-body',
+  variable: '--font-poppins',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
 })
 
 const dmSerifDisplay = DM_Serif_Display({
-  variable: '--font-heading',
+  variable: '--font-dm-serif-display',
   weight: ['400'],
   subsets: ['latin'],
 })
