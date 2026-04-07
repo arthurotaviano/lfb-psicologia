@@ -6,7 +6,7 @@ export default function FooterLinks() {
       {footerLinks.map(({ label, href, icon: Icon }) => (
         <li key={href}>
           <a className='group inline-flex items-center gap-1' href={href} target='_blank'>
-            <Icon className='size-3' aria-hidden='true' />
+            <Icon className='size-3 text-accent' aria-hidden='true' />
             <span className='group-hover:underline'>{label}</span>
           </a>
         </li>
