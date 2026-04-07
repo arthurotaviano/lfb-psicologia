@@ -70,7 +70,7 @@ export function NavbarMenuMobile() {
   return (
     <div className='inline-block md:hidden' onKeyDown={handleKeyDown} ref={menuRef}>
       <button className='md:hidden relative z-30 flex justify-center items-center -mr-2 w-8 h-8 pointer-events-auto cursor-pointer' type='button' ref={buttonRef} aria-expanded={isOpen} aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'} onClick={() => setIsOpen(!isOpen)}>
-        <svg className='h-3.5 w-3.5 stroke-accent pointer-events-none' fill='none' strokeWidth='2' strokeLinecap='round' aria-hidden='true'>
+        <svg className='overflow-visible h-3.5 w-3.5 stroke-accent pointer-events-none' fill='none' strokeWidth='2' strokeLinecap='round' aria-hidden='true'>
           <path className={`origin-center ${isOpen ? 'scale-90 opacity-0' : 'scale-100 opacity-100'} duration-150`} d='M0 1H14M0 7H14M0 13H14'></path>
           <path className={`origin-center ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0'} duration-150`} d='M2 2L12 12M12 2L2 12'></path>
         </svg>
