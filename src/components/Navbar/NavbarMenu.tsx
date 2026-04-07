@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import Button from '../Button'
+import { ButtonLink } from '../Button'
 import { button, links } from './links'
 
 export function NavbarMenuDesktop() {
@@ -20,9 +20,9 @@ export function NavbarMenuDesktop() {
         </li>
       ))}
       <li>
-        <Button href={button.href} role='button'>
+        <ButtonLink href={button.href} role='button'>
           {button.label}
-        </Button>
+        </ButtonLink>
       </li>
     </ul>
   )

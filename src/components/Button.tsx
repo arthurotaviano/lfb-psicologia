@@ -1,13 +1,24 @@
 import Link from 'next/link'
-import { AnchorHTMLAttributes } from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 
-interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string
 }
 
-export default function Button({ href, children, className = '', ...props }: ButtonProps) {
+const styles = 'rounded-full px-4 py-2 bg-accent hover:bg-accent-hover text-white font-medium cursor-pointer'
+
+export function Button({ children, ...props }: ButtonProps) {
   return (
-    <Link href={href} className={`rounded-full px-4 py-2 bg-accent hover:bg-accent-hover text-white font-medium ${className}`} {...props}>
+    <button className={styles} {...props}>
+      {children}
+    </button>
+  )
+}
+
+export function ButtonLink({ href, children, ...props }: ButtonLinkProps) {
+  return (
+    <Link className={styles} href={href} {...props}>
       {children}
     </Link>
   )
