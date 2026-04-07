@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
+import Button from '../Button'
 import { button, links } from './links'
 
 export function NavbarMenuDesktop() {
@@ -19,9 +20,9 @@ export function NavbarMenuDesktop() {
         </li>
       ))}
       <li>
-        <Link className='rounded-full px-4 py-2 bg-accent hover:bg-accent-hover text-white font-medium' href={button.href} role='button'>
+        <Button href={button.href} role='button'>
           {button.label}
-        </Link>
+        </Button>
       </li>
     </ul>
   )
@@ -79,7 +80,7 @@ export function NavbarMenuMobile() {
         </svg>
       </button>
       <div className={`${!isOpen ? 'invisible opacity-0 pointer-events-none' : 'visible opacity-100'} fixed inset-0 z-10 bg-background/50 duration-150`} aria-hidden='true' onClick={() => setIsOpen(false)} />
-      <ul className={`${!isOpen ? 'invisible opacity-0 scale-95' : 'visible opacity-100 scale-100'} absolute top-20 right-5 left-5 z-20 flex flex-col origin-top rounded-2xl border border-taupe-200 p-4 bg-white text-foreground text-lg tracking-tight duration-150`} aria-hidden={!isOpen}>
+      <ul className={`${!isOpen ? 'invisible opacity-0 scale-95' : 'visible opacity-100 scale-100'} absolute top-20 right-5 left-5 z-20 flex flex-col origin-top rounded-2xl border border-taupe-300 p-4 bg-white text-foreground text-lg tracking-tight duration-150`} aria-hidden={!isOpen}>
         {links.map(({ label, href }) => (
           <li key={href}>
             <Link className={`block p-2 hover:text-accent ${isCurrent(href) && 'text-accent'} font-medium`} href={href}>
@@ -87,7 +88,7 @@ export function NavbarMenuMobile() {
             </Link>
           </li>
         ))}
-        <hr className='mx-2 my-2 border-taupe-200' aria-hidden='true' />
+        <hr className='mx-2 my-2 border-taupe-300' aria-hidden='true' />
         <li>
           <Link className='block p-2 hover:text-accent font-medium' href={button.href} role='button'>
             {button.label}
