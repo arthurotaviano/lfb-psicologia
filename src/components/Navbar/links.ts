@@ -8,4 +8,4 @@ export const links: NavbarMenuLinksProps[] = [
   { label: 'Blog', href: '/blog' },
 ]
 
-export const button: NavbarMenuLinksProps = { label: 'Contato', href: '#' }
+export const button: NavbarMenuLinksProps = { label: 'Contato', href: 'https://wa.me/5521991316177' }
