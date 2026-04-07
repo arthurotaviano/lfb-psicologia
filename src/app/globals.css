@@ -5,6 +5,7 @@
   --color-foreground: #3d4d41;
   --color-accent: #ca7e59;
   --color-accent-hover: #cd8460;
+  --color-accent-active: #c7754d;
 }
 
 @utility font-body {
