@@ -16,8 +16,8 @@ const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'],
 })
 
-const title = 'LFB Psicologia'
-const description = 'Consultório de psicologia em Paracambi, Rio de Janeiro, com atendimento presencial e online.'
+const title = 'LFB Consultório de Psicologia'
+const description = 'Atendimento psicológico online e presencial em Paracambi-RJ para adolescentes, adultos e idosos.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lfbpsicologia.com.br'),
