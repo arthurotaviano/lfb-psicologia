@@ -20,7 +20,7 @@ export function NavbarMenuDesktop() {
         </li>
       ))}
       <li>
-        <ButtonLink href={button.href} role='button'>
+        <ButtonLink href={button.href} target='_blank' rel='noopener noreferrer' role='button'>
           {button.label}
         </ButtonLink>
       </li>
@@ -38,26 +38,22 @@ export function NavbarMenuMobile() {
   useEffect(() => {
     if (!isOpen) return
 
-    const handleEscape = (evt: KeyboardEvent) => {
-      if (evt.key === 'Escape') {
-        buttonRef.current?.focus()
-        setIsOpen(false)
-      }
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
+    const handleBreakpoint = (evt: MediaQueryListEvent) => {
+      if (evt.matches) setIsOpen(false)
     }
 
-    const handleResize = () => {
-      if (window.innerWidth >= 768) setIsOpen(false)
-    }
-
-    document.addEventListener('keydown', handleEscape)
-    window.addEventListener('resize', handleResize)
-    return () => {
-      document.removeEventListener('keydown', handleEscape)
-      window.removeEventListener('resize', handleResize)
-    }
+    mediaQuery.addEventListener('change', handleBreakpoint)
+    return () => mediaQuery.removeEventListener('change', handleBreakpoint)
   }, [isOpen])
 
   const handleKeyDown = (evt: React.KeyboardEvent) => {
+    if (evt.key === 'Escape') {
+      buttonRef.current?.focus()
+      setIsOpen(false)
+      return
+    }
+
     if (evt.key !== 'Tab' || !menuRef.current) return
 
     const focusableElements = menuRef.current.querySelectorAll<HTMLElement>('a, button')
@@ -83,14 +79,14 @@ export function NavbarMenuMobile() {
       <ul className={`${!isOpen ? 'invisible opacity-0 scale-95' : 'visible opacity-100 scale-100'} absolute top-20 right-5 left-5 z-20 flex flex-col origin-top rounded-2xl border border-taupe-300 p-4 bg-white text-foreground text-lg tracking-tight duration-150`} aria-hidden={!isOpen}>
         {links.map(({ label, href }) => (
           <li key={href}>
-            <Link className={`block p-2 hover:text-accent ${isCurrent(href) && 'text-accent'} font-medium`} href={href}>
+            <Link className={`block p-2 hover:text-accent ${isCurrent(href) && 'text-accent'} font-medium`} href={href} onClick={() => setIsOpen(false)}>
               {label}
             </Link>
           </li>
         ))}
         <hr className='mx-2 my-2 border-taupe-300' aria-hidden='true' />
         <li>
-          <Link className='block p-2 hover:text-accent font-medium' href={button.href} role='button'>
+          <Link className='block p-2 hover:text-accent font-medium' href={button.href} target='_blank' rel='noopener noreferrer' role='button'>
             {button.label}
           </Link>
         </li>
