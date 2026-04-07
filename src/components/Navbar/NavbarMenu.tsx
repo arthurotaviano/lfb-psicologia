@@ -75,7 +75,7 @@ export function NavbarMenuMobile() {
           <path className={`origin-center ${isOpen ? 'scale-100 opacity-100' : 'scale-90 opacity-0'} duration-150`} d='M2 2L12 12M12 2L2 12'></path>
         </svg>
       </button>
-      <div className={`${!isOpen ? 'invisible opacity-0 pointer-events-none' : 'visible opacity-100'} fixed inset-0 z-10 bg-background/50 duration-150`} aria-hidden='true' onClick={() => setIsOpen(false)} />
+      <div className={`${!isOpen ? 'invisible opacity-0 pointer-events-none' : 'visible opacity-100'} fixed inset-0 z-10 bg-background/50 backdrop-blur-xs duration-150`} aria-hidden='true' onClick={() => setIsOpen(false)} />
       <ul className={`${!isOpen ? 'invisible opacity-0 scale-95' : 'visible opacity-100 scale-100'} absolute top-20 right-5 left-5 z-20 flex flex-col origin-top rounded-2xl border border-taupe-300 p-4 bg-white text-foreground text-lg tracking-tight duration-150`} aria-hidden={!isOpen}>
         {links.map(({ label, href }) => (
           <li key={href}>
