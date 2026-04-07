@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang='pt-BR'>
       <body className={`${poppins.variable} ${dmSerifDisplay.variable} antialiased scroll-smooth bg-background text-foreground selection:bg-accent/25 font-body`}>
         <Navbar />
-        <main className='flex flex-col gap-20 pt-8 md:pt-10 pb-13 md:pb-20'>{children}</main>
+        <main className='flex flex-col gap-13 md:gap-25 pt-8 md:pt-10 pb-18 md:pb-30'>{children}</main>
         <Footer />
       </body>
     </html>
