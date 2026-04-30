@@ -3,12 +3,12 @@ import { Heading } from '@/components/heading'
 import { Button } from '../button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog'
 
-interface AboutProfileProps {
+interface HomeAboutProfileProps {
   name: string
   crp: string
 }
 
-function AboutModal({ name, crp }: AboutProfileProps) {
+function HomeAboutModal({ name, crp }: HomeAboutProfileProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -29,18 +29,18 @@ function AboutModal({ name, crp }: AboutProfileProps) {
   )
 }
 
-function AboutProfile({ name, crp }: AboutProfileProps) {
+function HomeAboutProfile({ name, crp }: HomeAboutProfileProps) {
   return (
     <div className='flex flex-col items-center gap-2'>
       <div className='rounded-full border border-taupe-300 w-40 md:w-50 h-40 md:h-50 bg-white/30'></div>
       <Heading variant={4}>{name}</Heading>
       <p className='font-semibold'>CRP {crp}</p>
-      <AboutModal name={name} crp={crp} />
+      <HomeAboutModal name={name} crp={crp} />
     </div>
   )
 }
 
-export function About() {
+export function HomeAbout() {
   return (
     <section className='text-center'>
       <Container className='flex flex-col gap-8 md:gap-10'>
@@ -54,8 +54,8 @@ export function About() {
           </p>
         </div>
         <div className='flex flex-col md:flex-row md:justify-center gap-8 md:gap-10'>
-          <AboutProfile name='Luana de Freitas Beligote' crp='05/55344' />
-          <AboutProfile name='Loara de Freitas Beligote' crp='05/61567' />
+          <HomeAboutProfile name='Luana de Freitas Beligote' crp='05/55344' />
+          <HomeAboutProfile name='Loara de Freitas Beligote' crp='05/61567' />
         </div>
       </Container>
     </section>
