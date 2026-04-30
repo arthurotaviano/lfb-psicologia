@@ -1,3 +1,5 @@
+import { Footer } from '@/components/footer'
+import { Navbar } from '@/components/navbar/navbar'
 import type { Metadata } from 'next'
 import { DM_Serif_Display, Poppins } from 'next/font/google'
 import './globals.css'
@@ -35,7 +37,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR' className={`${poppins.variable} ${dmSerifDisplay.variable} antialiased`}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className='flex flex-col gap-13 md:gap-25 pt-8 md:pt-10 pb-18 md:pb-30'>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
