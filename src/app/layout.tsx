@@ -1,8 +1,11 @@
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar/navbar'
 import type { Metadata } from 'next'
-import { DM_Serif_Display, Poppins } from 'next/font/google'
+import { DM_Serif_Display, Poppins, Inter } from 'next/font/google'
 import './globals.css'
+import { cn } from "@/lib/utils";
+
+const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -36,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='pt-BR' className={`${poppins.variable} ${dmSerifDisplay.variable} antialiased`}>
+    <html lang='pt-BR' className={cn("antialiased", poppins.variable, dmSerifDisplay.variable, "font-sans", inter.variable)}>
       <body>
         <Navbar />
         <main className='flex flex-col gap-13 md:gap-25 pt-8 md:pt-10 pb-18 md:pb-30'>{children}</main>
