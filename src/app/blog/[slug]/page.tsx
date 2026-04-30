@@ -24,7 +24,7 @@ export default function BlogPost() {
           <span className='text-sm'>01/01/2026</span>
           <Heading variant={1}>Título do Post</Heading>
           <div className='flex items-center gap-2 text-sm' aria-hidden='true'>
-            <span className='rounded-full border border-taupe-300 w-5 h-5 bg-accent/5'></span>
+            <span className='rounded-full border border-taupe-300 w-5 h-5 bg-white/30'></span>
             <span>Nome da Autora</span>
           </div>
         </div>
