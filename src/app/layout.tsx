@@ -19,7 +19,8 @@ const dmSerifDisplay = DM_Serif_Display({
 })
 
 const title = 'LFB Consultório de Psicologia'
-const description = 'Atendimento psicológico online e presencial em Paracambi-RJ para adolescentes, adultos e idosos.'
+const description =
+  'Atendimento psicológico online e presencial em Paracambi-RJ para adolescentes, adultos e idosos.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lfbpsicologia.com.br'),
@@ -39,9 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='pt-BR' className={`${poppins.variable} ${dmSerifDisplay.variable} antialiased`}>
-      <body>
+      <body className='bg-background text-foreground selection:bg-accent/25 font-sans'>
         <Navbar />
-        <main className='flex flex-col gap-13 md:gap-25 pt-8 md:pt-10 pb-18 md:pb-30'>{children}</main>
+        <main className='flex flex-col gap-13 md:gap-25 pt-8 md:pt-10 pb-18 md:pb-30'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

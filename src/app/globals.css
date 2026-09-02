@@ -120,10 +120,6 @@
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground selection:bg-accent/25 font-sans;
-  }
-
   :focus-visible {
     @apply outline-2 outline-offset-1 outline-solid outline-accent;
   }
