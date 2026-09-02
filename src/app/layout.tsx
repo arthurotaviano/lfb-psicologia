@@ -21,9 +21,8 @@ const dmSerifDisplay = DM_Serif_Display({
 const title = 'LFB Consultório de Psicologia'
 const description =
   'Atendimento psicológico online e presencial em Paracambi-RJ para adolescentes, adultos e idosos.'
-
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lfbpsicologia.com.br'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
   title,
   description,
   openGraph: {
