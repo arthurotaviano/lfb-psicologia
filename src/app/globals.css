@@ -121,6 +121,6 @@
 
 @layer base {
   :focus-visible {
-    @apply outline-2 outline-offset-1 outline-solid outline-accent;
+    @apply outline-2 outline-offset-2 outline-solid outline-accent;
   }
 }
