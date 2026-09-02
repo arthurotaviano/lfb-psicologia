@@ -3,10 +3,10 @@ import { Heading } from '@/components/heading'
 import { Metadata } from 'next'
 
 const title = 'Título do Post - LFB Consultório de Psicologia'
-const description = 'Leia na íntegra o artigo "Título do Post", publicado por Nome da Autora em 01/01/2016.'
-
+const description =
+  'Leia na íntegra o artigo "Título do Post", publicado por Nome da Autora em 01/01/2016.'
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lfbpsicologia.com.br'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
   title,
   description,
   openGraph: {
@@ -29,9 +29,21 @@ export default function BlogPost() {
           </div>
         </div>
         <div className='flex flex-col gap-4'>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi totam laboriosam doloremque, magnam voluptatibus inventore perferendis. Culpa, ipsam unde, cupiditate natus amet nihil sint odio maxime accusamus excepturi vero impedit.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis illum, fugiat quidem doloremque asperiores voluptatibus labore, expedita minus facilis fugit nam, error dolorem dolor sapiente. Nesciunt magnam hic sit totam.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquid, libero magnam numquam, in alias iusto delectus expedita tempore corporis non voluptatibus blanditiis vitae porro consequatur. Dolor deserunt adipisci temporibus.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi totam laboriosam
+            doloremque, magnam voluptatibus inventore perferendis. Culpa, ipsam unde, cupiditate
+            natus amet nihil sint odio maxime accusamus excepturi vero impedit.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis illum, fugiat quidem
+            doloremque asperiores voluptatibus labore, expedita minus facilis fugit nam, error
+            dolorem dolor sapiente. Nesciunt magnam hic sit totam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aliquid, libero magnam
+            numquam, in alias iusto delectus expedita tempore corporis non voluptatibus blanditiis
+            vitae porro consequatur. Dolor deserunt adipisci temporibus.
+          </p>
         </div>
       </Container>
     </article>

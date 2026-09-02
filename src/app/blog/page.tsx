@@ -4,10 +4,10 @@ import { Heading } from '@/components/heading'
 import type { Metadata } from 'next'
 
 const title = 'Blog - LFB Consultório de Psicologia'
-const description = 'Artigos e dicas sobre saúde mental e bem-estar, através do olhar da abordagem Terapia Cognitivo-Comportamental.'
-
+const description =
+  'Artigos e dicas sobre saúde mental e bem-estar, através do olhar da abordagem Terapia Cognitivo-Comportamental.'
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lfbpsicologia.com.br'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
   title,
   description,
   openGraph: {
