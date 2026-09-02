@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ButtonLink } from '../button'
 
-export function NavbarMenuDesktop() {
+export function MenuDesktop() {
   const pathname = usePathname()
   const isCurrent = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href))
 
@@ -31,7 +31,7 @@ export function NavbarMenuDesktop() {
   )
 }
 
-export function NavbarMenuMobile() {
+export function MenuMobile() {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
