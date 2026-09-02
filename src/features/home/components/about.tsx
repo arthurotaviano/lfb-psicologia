@@ -9,12 +9,12 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 
-type ProfileProps = {
+type AboutProfileProps = {
   name: string
   crp: string
 }
 
-function AboutModal({ name, crp }: ProfileProps) {
+function AboutModal({ name, crp }: AboutProfileProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -39,7 +39,7 @@ function AboutModal({ name, crp }: ProfileProps) {
   )
 }
 
-function AboutProfile({ name, crp }: ProfileProps) {
+function AboutProfile({ name, crp }: AboutProfileProps) {
   return (
     <div className='flex flex-col items-center gap-2'>
       <div className='rounded-full border border-taupe-300 w-40 md:w-50 h-40 md:h-50 bg-white/30'></div>

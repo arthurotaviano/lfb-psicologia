@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export function Logo() {
+export function NavbarLogo() {
   return (
     <Link className='block w-9 md:w-68.5 h-10 md:h-15 overflow-hidden' href='/'>
       <Image

@@ -1,12 +1,27 @@
 'use client'
 
-import { button, links } from '@/data/navbar'
+import { CONTACT_LINKS } from '@/constants/contact'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ButtonLink } from '../button'
 
-export function MenuDesktop() {
+type NavbarMenuLinkProps = {
+  label: string
+  href: string
+}
+
+const links: NavbarMenuLinkProps[] = [
+  { label: 'Início', href: '/' },
+  { label: 'Blog', href: '/blog' },
+]
+
+const button: NavbarMenuLinkProps = {
+  label: 'Contato',
+  href: CONTACT_LINKS.WHATSAPP,
+}
+
+export function NavbarMenuDesktop() {
   const pathname = usePathname()
   const isCurrent = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href))
 
@@ -31,7 +46,7 @@ export function MenuDesktop() {
   )
 }
 
-export function MenuMobile() {
+export function NavbarMenuMobile() {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
