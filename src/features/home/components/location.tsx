@@ -1,7 +1,7 @@
 import { Heading } from '@/components/heading'
 import { MapPin } from 'lucide-react'
 
-export function HomeLocation() {
+export function Location() {
   return (
     <section>
       <div className='content grid md:grid-cols-2 gap-8 md:gap-10'>

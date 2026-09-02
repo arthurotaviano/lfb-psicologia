@@ -2,7 +2,7 @@ import { BlogList } from '@/components/blog-list'
 import { ButtonLink } from '@/components/button'
 import { Heading } from '@/components/heading'
 
-export function HomeLatestPosts() {
+export function LatestPosts() {
   return (
     <section>
       <div className='content'>

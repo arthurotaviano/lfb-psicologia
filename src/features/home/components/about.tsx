@@ -14,7 +14,7 @@ type ProfileProps = {
   crp: string
 }
 
-function HomeAboutModal({ name, crp }: ProfileProps) {
+function AboutModal({ name, crp }: ProfileProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -39,18 +39,18 @@ function HomeAboutModal({ name, crp }: ProfileProps) {
   )
 }
 
-function HomeAboutProfile({ name, crp }: ProfileProps) {
+function AboutProfile({ name, crp }: ProfileProps) {
   return (
     <div className='flex flex-col items-center gap-2'>
       <div className='rounded-full border border-taupe-300 w-40 md:w-50 h-40 md:h-50 bg-white/30'></div>
       <Heading variant={4}>{name}</Heading>
       <p className='font-semibold'>CRP {crp}</p>
-      <HomeAboutModal name={name} crp={crp} />
+      <AboutModal name={name} crp={crp} />
     </div>
   )
 }
 
-export function HomeAbout() {
+export function About() {
   return (
     <section className='text-center'>
       <div className='content flex flex-col gap-8 md:gap-10'>
@@ -67,8 +67,8 @@ export function HomeAbout() {
           </p>
         </div>
         <div className='flex flex-col md:flex-row md:justify-center gap-8 md:gap-10'>
-          <HomeAboutProfile name='Luana de Freitas Beligote' crp='05/55344' />
-          <HomeAboutProfile name='Loara de Freitas Beligote' crp='05/61567' />
+          <AboutProfile name='Luana de Freitas Beligote' crp='05/55344' />
+          <AboutProfile name='Loara de Freitas Beligote' crp='05/61567' />
         </div>
       </div>
     </section>
