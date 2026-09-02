@@ -1,4 +1,3 @@
-import { Container } from '@/components/container'
 import { Heading } from '@/components/heading'
 import { Metadata } from 'next'
 
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <article>
-      <Container className='flex flex-col gap-8 md:gap-10 max-w-3xl'>
+      <div className='content flex flex-col gap-8 md:gap-10 max-w-3xl'>
         <div className='flex flex-col gap-4'>
           <span className='text-sm'>01/01/2026</span>
           <Heading variant={1}>Título do Post</Heading>
@@ -45,7 +44,7 @@ export default function BlogPost() {
             vitae porro consequatur. Dolor deserunt adipisci temporibus.
           </p>
         </div>
-      </Container>
+      </div>
     </article>
   )
 }

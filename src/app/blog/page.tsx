@@ -1,5 +1,4 @@
 import { BlogList } from '@/components/blog-list'
-import { Container } from '@/components/container'
 import { Heading } from '@/components/heading'
 import type { Metadata } from 'next'
 
@@ -20,10 +19,10 @@ export const metadata: Metadata = {
 export default function Blog() {
   return (
     <section>
-      <Container className='flex flex-col gap-8 md:gap-10'>
+      <div className='content flex flex-col gap-8 md:gap-10'>
         <Heading variant={1}>Blog</Heading>
         <BlogList />
-      </Container>
+      </div>
     </section>
   )
 }

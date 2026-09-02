@@ -1,14 +1,20 @@
-import { Container } from '@/components/container'
+import { Button } from '@/components/button'
 import { Heading } from '@/components/heading'
-import { Button } from '../button'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
 
-interface HomeAboutProfileProps {
+type ProfileProps = {
   name: string
   crp: string
 }
 
-function HomeAboutModal({ name, crp }: HomeAboutProfileProps) {
+function HomeAboutModal({ name, crp }: ProfileProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -22,14 +28,18 @@ function HomeAboutModal({ name, crp }: HomeAboutProfileProps) {
             <DialogDescription>Sobre a psicóloga {name}</DialogDescription>
             <p className='font-semibold'>CRP {crp}</p>
           </DialogHeader>
-          <p className='text-balance'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsa numquam neque earum iusto inventore voluptatibus commodi nesciunt cumque modi. Sequi voluptates, temporibus aliquam illo aspernatur ipsum. Exercitationem, delectus cupiditate.</p>
+          <p className='text-balance'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ipsa numquam neque earum
+            iusto inventore voluptatibus commodi nesciunt cumque modi. Sequi voluptates, temporibus
+            aliquam illo aspernatur ipsum. Exercitationem, delectus cupiditate.
+          </p>
         </div>
       </DialogContent>
     </Dialog>
   )
 }
 
-function HomeAboutProfile({ name, crp }: HomeAboutProfileProps) {
+function HomeAboutProfile({ name, crp }: ProfileProps) {
   return (
     <div className='flex flex-col items-center gap-2'>
       <div className='rounded-full border border-taupe-300 w-40 md:w-50 h-40 md:h-50 bg-white/30'></div>
@@ -43,21 +53,24 @@ function HomeAboutProfile({ name, crp }: HomeAboutProfileProps) {
 export function HomeAbout() {
   return (
     <section className='text-center'>
-      <Container className='flex flex-col gap-8 md:gap-10'>
+      <div className='content flex flex-col gap-8 md:gap-10'>
         <div className='flex flex-col gap-2 md:gap-4'>
           <Heading variant={2}>Quem somos</Heading>
           <Heading variant={3}>
-            Pós-graduadas em Terapia <span className='whitespace-nowrap'>Cognitivo-Comportamental</span>
+            Pós-graduadas em Terapia{' '}
+            <span className='whitespace-nowrap'>Cognitivo-Comportamental</span>
           </Heading>
           <p className='text-balance'>
-            Atendimento online e presencial em <span className='whitespace-nowrap'>Paracambi-RJ</span> para adolescentes, adultos e idosos.
+            Atendimento online e presencial em{' '}
+            <span className='whitespace-nowrap'>Paracambi-RJ</span> para adolescentes, adultos e
+            idosos.
           </p>
         </div>
         <div className='flex flex-col md:flex-row md:justify-center gap-8 md:gap-10'>
           <HomeAboutProfile name='Luana de Freitas Beligote' crp='05/55344' />
           <HomeAboutProfile name='Loara de Freitas Beligote' crp='05/61567' />
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

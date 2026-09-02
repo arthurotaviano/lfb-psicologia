@@ -1,6 +1,6 @@
-import { HomeAbout } from '@/components/home/about'
-import { HomeLatestPosts } from '@/components/home/latest-posts'
-import { HomeLocation } from '@/components/home/location'
+import { HomeAbout } from '@/features/home/components/about'
+import { HomeLatestPosts } from '@/features/home/components/latest-posts'
+import { HomeLocation } from '@/features/home/components/location'
 
 export default function Home() {
   return (

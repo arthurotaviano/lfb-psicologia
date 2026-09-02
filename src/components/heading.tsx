@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-interface HeadingProps {
+type HeadingProps = {
   variant: 1 | 2 | 3 | 4
   children: ReactNode
 }
