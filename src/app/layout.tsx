@@ -1,10 +1,8 @@
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar/navbar'
 import type { Metadata } from 'next'
-import { DM_Serif_Display, Inter, Poppins } from 'next/font/google'
+import { DM_Serif_Display, Poppins } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 const poppins = Poppins({
   variable: '--font-poppins',
