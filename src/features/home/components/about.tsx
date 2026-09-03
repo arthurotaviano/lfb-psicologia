@@ -1,5 +1,4 @@
-import { Button } from '@/components/button'
-import { Heading } from '@/components/heading'
+import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
@@ -8,6 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { Heading } from '@/components/ui/heading'
 
 type AboutProfileProps = {
   name: string

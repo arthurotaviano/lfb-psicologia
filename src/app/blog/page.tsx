@@ -1,5 +1,5 @@
 import { BlogList } from '@/components/blog-list'
-import { Heading } from '@/components/heading'
+import { Heading } from '@/components/ui/heading'
 import type { Metadata } from 'next'
 
 const title = 'Blog - LFB Consultório de Psicologia'

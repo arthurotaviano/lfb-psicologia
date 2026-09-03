@@ -1,4 +1,4 @@
-import { Heading } from '@/components/heading'
+import { Heading } from '@/components/ui/heading'
 import { Metadata } from 'next'
 
 const title = 'Título do Post - LFB Consultório de Psicologia'

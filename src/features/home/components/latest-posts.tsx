@@ -1,6 +1,6 @@
 import { BlogList } from '@/components/blog-list'
-import { ButtonLink } from '@/components/button'
-import { Heading } from '@/components/heading'
+import { ButtonLink } from '@/components/ui/button'
+import { Heading } from '@/components/ui/heading'
 
 export function LatestPosts() {
   return (

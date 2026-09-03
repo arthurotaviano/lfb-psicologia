@@ -4,7 +4,7 @@ import { CONTACT_LINKS } from '@/constants/contact'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import { ButtonLink } from '../button'
+import { ButtonLink } from '../ui/button'
 
 type NavbarMenuLinkProps = {
   label: string
