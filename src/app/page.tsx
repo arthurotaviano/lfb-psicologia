@@ -1,6 +1,6 @@
-import { About } from '@/features/home/components/about'
-import { LatestPosts } from '@/features/home/components/latest-posts'
-import { Location } from '@/features/home/components/location'
+import { About } from '@/views/home/components/about'
+import { LatestPosts } from '@/views/home/components/latest-posts'
+import { Location } from '@/views/home/components/location'
 
 export default function Home() {
   return (
